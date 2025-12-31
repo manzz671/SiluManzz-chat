@@ -101,7 +101,7 @@ function renderMessage(text, role) {
     pre.appendChild(copyBtn);
     div.appendChild(pre);
   } else {
-    div.innerHTML = toHyperlink(text);
+    div.innerHTML = toHyperLink(text);
   }
 
   chatEl.appendChild(div);
