@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SiluManzz-AI chat</title>
+    <link rel="stylesheet" href="styling/style.css"/>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="title-wrap">
+        <h1 class="app-title">SiluManzz-AI Chat</h1>
+          <div class="menu">
+            <button id="menu-btn" aria-label="Menu" class="menu-btn">=</button>
+            <div id="menu-dropdown" class="menu-dropdown">
+              <button class="menu-item" data-modal="help">Help</button>
+              <button class="menu-item" data-modal="contact">Contact</button>
+              <button class="menu-item" data-modal="report">Report</button>
+            </div>
+          </div>
+       </div>
+    </header>
+    
+    <main class="chat-container">
+      <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+      <div id="typing" class="typing">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="typing-text">Bntr lagi mikir..</span>
+      </div>
+      <form id="input-form" class="message-input" autocomplete="off">
+        <textarea id="user-input"
+        placeholder="Tulis pesan.."
+        rows="1"
+        maxlength="4000"
+        required></textarea>
+        <button id="send-btn" class="send-btn" type="submit">send</button>
+      </form>
+    </main>
+    <div id="modal-backdrop" class="modal-backdrop" hidden></div>
+    <div id="modal-root" class="modal-root" hidden></div>
+    <script src="src/utils.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>

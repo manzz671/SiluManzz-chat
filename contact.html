@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #0b1220;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 20px;
+    }
+    .modal {
+      width: min(520px, 94vw);
+      background: #111827;
+      color: #e5e7eb;
+      border: 1px solid #223047;
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 10px 36px rgba(0,0,0,0.5);
+      margin: auto;
+      animation: popIn 0.3s ease;
+    }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .modal-header {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid #223047; padding-bottom: 8px;
+    }
+    .modal-title {
+      font-size: 20px; color: #7c3aed; margin: 0;
+    }
+    .modal-close {
+      background: transparent; border: none; color: #e5e7eb;
+      font-size: 18px; cursor: pointer; border-radius: 10px; padding: 2px 6px;
+      transition: background 0.3s ease;
+    }
+    .modal-close:hover { background: #151e2f; }
+    .modal-body { margin-top: 12px; color: #9ca3af; font-size: 14px; }
+    .modal-body textarea, .modal-body input {
+      width: 100%; margin-top: 6px; margin-bottom: 12px;
+      background: #1b2334; color: #e5e7eb;
+      border: 1px solid #223047; border-radius: 12px;
+      padding: 8px 10px;
+    }
+    .modal-actions { margin-top: 16px; display: flex; gap: 8px; }
+    .btn {
+      background: #1b2334; color: #e5e7eb; border: 1px solid #223047;
+      padding: 8px 14px; border-radius: 12px; cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-decoration: none; display: inline-block;
+    }
+    .btn:hover { background: #24334f; transform: translateY(-2px); }
+    .btn.primary {
+      background: #7c3aed; color: #fff; border: none;
+    }
+    .btn.primary:hover { background: #8b5cf6; }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <div class="modal-header">
+      <h2 class="modal-title">Contact</h2>
+      <button class="modal-close" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>Kirim pesan langsung ke developer via WhatsApp atau Telegram.</p>
+      <form id="contact-form">
+        <label>
+          Nama
+          <input type="text" name="nama" placeholder="Nama kamu" required />
+        </label>
+        <label>
+          Pesan
+          <textarea name="pesan" rows="4" placeholder="Tulis pesanmu…" required></textarea>
+        </label>
+      </form>
+    </div>
+    <div class="modal-actions">
+      <button class="btn" data-close>Batal</button>
+      <button class="btn primary" id="send-whatsapp">Kirim WhatsApp</button>
+      <button class="btn primary" id="send-telegram">Kirim Telegram</button>
+    </div>
+  </div>
+
+  <script src="src/contact.js>
+  </script>
+</body>
+</html>
